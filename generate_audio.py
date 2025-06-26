@@ -23,7 +23,7 @@ def generate_audio(text: str, voice_id: str, audio_key: str):
         os.makedirs(AUDIO_DIR, exist_ok=True)
 
         try:
-            audio_stream = client.text_to_speech.convert_as_stream(
+            audio_stream = client.text_to_speech.convert(
                 text=text,
                 voice_id=voice_id,
                 model_id="eleven_multilingual_v2"
